@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from "../config/firebase";
+import firebase from "../../config/firebase";
 
 const uiConfig = {
   signInFlow: 'popup',
@@ -14,7 +14,7 @@ const uiConfig = {
   },
 };
 
-function Login() {
+const Login = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
