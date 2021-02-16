@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { useUserSelector } from '../../redux/user/hooks/useUserIsLoggedIn';
+import { useUserIsLoggedIn } from '../../redux/user/hooks/useUserIsLoggedIn';
 
 
 const AuthenticatedRoute = ({component: Component, ...rest}: {component: any, path: string}) => {
-    const isLoggedIn = useUserSelector();
+    const isLoggedIn = useUserIsLoggedIn();
     
     return (
         <Route {...rest} render={props => (

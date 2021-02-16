@@ -1,3 +1,3 @@
-import isLoggedIn from "./isLoggedIn";
+import waitAtLeast from "./waitAtLeast";
 
-export { isLoggedIn };
+export { waitAtLeast };
