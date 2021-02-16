@@ -1,4 +1,6 @@
-const isLoggedIn = () => true;
+const isLoggedIn = () => {
+  return false;
+}
 
 
 export default isLoggedIn;
