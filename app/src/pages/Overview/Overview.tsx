@@ -1,10 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import firebase from '../../config/firebase';
 import { userLogout } from '../../redux/user/userActions';
+import { userSelector } from '../../redux/user/userSelector';
 
 const Overview: React.FunctionComponent<{}> = props => {
+
+  const user = useSelector(userSelector);
 
   const dispatch = useDispatch();
 
@@ -20,7 +23,7 @@ const Overview: React.FunctionComponent<{}> = props => {
         <a onClick={handleLogout}>Sign-out</a>
       </div>
       <div>
-        <p>Overview :)</p>
+        <p>Overview :) {user.displayName}</p>
       </div>
     </>
   )
